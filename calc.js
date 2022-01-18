@@ -5,7 +5,10 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-
+console.log("Directions: order your calculation with the operator first, add a space then add your first number, add another space and add your secound number.")
+console.log("Operators supported: +, -, *, /, %, ^, sqrt")
+console.log("Example: + 1 2")
+console.log("Example sqrt: sqrt 10")
 
 reader.question("What would you like to calculate?", function(input){
 	tokens = input.split(' ');
@@ -16,6 +19,8 @@ reader.question("What would you like to calculate?", function(input){
 
 	let isSquareRoot = false
 	let answer
+
+	
 
 	if (mathSymbol === "+") {
 		answer = num1 + num2
